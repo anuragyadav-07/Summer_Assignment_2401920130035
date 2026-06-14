@@ -1,0 +1,19 @@
+class Q1 {
+    public String reverseWords(String s) {
+        String[] arr = s.split(" ");
+
+        for(int i=0; i<arr.length; i++){
+            String ss = arr[i];
+            StringBuilder br = new StringBuilder(ss);
+            arr[i] = br.reverse().toString();
+        }
+        StringBuilder br = new StringBuilder();
+
+        for(String newS : arr){
+            br.append(newS);
+            br.append(" ");
+        }
+
+        return br.toString().trim();
+    }
+}
